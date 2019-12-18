@@ -9,9 +9,10 @@ services:
       - ./jenkins_home:/var/jenkins_home
     #links:
       #- slave01
+    tty: true
 
-  #slave01:
-    #container_name: slave01
-    #image: jenkinsci/ssh-slave
-    #environment:
-      #- JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa ...
+  slave01:
+    container_name: slave01
+    image: jenkinsci/ssh-slave
+    environment:
+      - JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQ
