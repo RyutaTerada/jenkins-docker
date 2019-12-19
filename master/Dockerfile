@@ -9,5 +9,4 @@ RUN apt-get update && \
   apt-get update && \
   apt-get install -y jenkins docker-ce && \
   curl -L https://github.com/docker/compose/releases/download/1.20.0-rc1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose && \
-  chmod +x /usr/local/bin/docker-compose && \
-  ssh -T git@github.com
+  chmod +x /usr/local/bin/docker-compose
