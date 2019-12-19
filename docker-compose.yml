@@ -2,13 +2,11 @@ version: "3"
 services:
   master:
     container_name: master
-    image: ub-jenkins
+    build: ./master
     ports:
       - 18080:8080
     volumes:
       - ./jenkins_home:/var/jenkins_home
-    #links:
-      #- slave01
     tty: true
     command: server jenkins start
 
