@@ -10,9 +10,13 @@ services:
     #links:
       #- slave01
     tty: true
+    command: server jenkins start
 
   slave01:
     container_name: slave01
-    image: jenkinsci/ssh-slave
+    build: ./slave01
+    ports:
+      - "22:22"
+    tty: true
     environment:
       - JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDP6Kzew18mVSlb5WuwuofqFB2gCVRB6POMIWjBG9zwjrCE+vvXXD855zLVQjthshQLpZY4+yRVwZuo6LJvbeA+tH+D879EEyzoOrcU9G3SqyXaYCzCy0oXaYkcyd/n3v8hcCQ5PqvdVmFP5iWdmYKT2B7Q2JDzj1tu/I+2l170/3INUnGweYnSlCuRUbP2OiNiWRYDv7qn5vsE2WgFyAoOAJG8cvl+OMljK6HNjWQ2JNfHywo6srgP+T2eq0bynVRSpH255N3Xd6BpgK5GvfU0JVN/RxtzSAlEzM7kLlVG+L16b0MmYLMnkOeirj/kGY/HTFPTnPNtE3b1+U9+GBPr
