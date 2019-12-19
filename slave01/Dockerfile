@@ -8,4 +8,4 @@ RUN useradd -d /home/jenkins -m -s /bin/bash jenkins
 RUN echo jenkins:pass | chpasswd
 RUN echo 'jenkins ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-CMD ["/usr/sbin/sshd","-D"]ssssssssssssssssssssssssssw
+CMD ["/usr/sbin/sshd","-D"]
