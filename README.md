@@ -14,3 +14,5 @@ STEP4
 cat /var/lib/jenkins/secrets/initialAdminPassword
 
 STEP5
+ssh -T git@github.com
+chmod 600 /root/.ssh/id_rsa
