@@ -7,9 +7,9 @@ services:
       - "18080:8080"
       - "5000:3000"
     volumes:
-      #- ./jenkins_home:/var/jenkins_home
       - ./.ssh:/root/.ssh/
-      - /var/run/docker/sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
     tty: true
 
   #slave01:
