@@ -8,7 +8,7 @@ docker exec -it master bash
 service jenkins start
 
 STEP3
-103.:18080
+ 133.18.204.104:18080
 
 STEP4
 cat /var/lib/jenkins/secrets/initialAdminPassword
